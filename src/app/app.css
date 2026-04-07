@@ -1,0 +1,205 @@
+:host {
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  display: block;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #ef5350 0%, #d32f2f 100%);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo-icon { width: 32px; height: 32px; }
+
+.pokedex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cartas un poco más anchas */
+  gap: 30px;
+  padding: 0 2rem 2rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* === ESTRUCTURA DE LA CARTA (ANIMACIÓN FLIP) === */
+
+.card-container {
+  background-color: transparent;
+  width: 100%;
+  height: 380px; /* Altura fija de la carta */
+  perspective: 1000px; /* VITAL: Da el efecto de profundidad 3D */
+  cursor: pointer;
+}
+
+/* El elemento que realmente gira */
+.card-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s; /* Velocidad del giro */
+  transform-style: preserve-3d; /* VITAL: Mantiene las caras en el mismo espacio 3D */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+/* ACTIVADOR DEL GIRO (Al pasar el ratón) */
+.card-container:hover .card-flipper {
+  transform: rotateY(180deg);
+}
+
+/* Posición común para ambas caras */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* VITAL: Oculta la cara trasera al girar */
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 4px solid #e0e0e0; /* Borde estilo carta TCG */
+}
+
+/* === ESTILOS CARA FRONTAL === */
+.card-front {
+  background: white;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-front img {
+  width: 160px;
+  height: 160px;
+  margin: 10px 0;
+  transition: transform 0.3s;
+}
+
+/* Pequeño efecto zoom en la imagen cuando está de frente */
+.card-container:hover .card-front img {
+  transform: scale(1.1);
+}
+
+.card-front h2 { margin: 5px 0; font-size: 1.5rem; }
+
+/* === ESTILOS CARA TRASERA === */
+.card-back {
+  color: white;
+  transform: rotateY(180deg); /* VITAL: Inicialmente está girada 180º */
+  justify-content: space-start;
+  font-size: 0.9rem;
+}
+
+.back-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.back-header h3 { margin: 0; font-size: 1.1rem; }
+.pokemon-id-back { opacity: 0.8; font-weight: bold; }
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stat-name { width: 70px; text-align: left; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+.stat-value { width: 30px; text-align: right; font-weight: bold; }
+
+.stat-bar-bg {
+  flex-grow: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(255,255,255,0.8);
+}
+
+.extra-info {
+  margin-top: auto;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  font-style: italic;
+}
+
+/* === ESTILOS COMUNES Y COLORES === */
+.pokemon-id {
+  background: #eee;
+  color: #555;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.types-container { display: flex; gap: 8px; }
+
+.type-badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.loading {
+  text-align: center; font-size: 1.5rem; grid-column: 1 / -1; color: #666; margin-top: 50px;
+}
+
+/* === COLORES DE TIPO (Fondo Trasero y Badges) === */
+.card-back.grass, .grass { background-color: #78C850; border-color: #5ea13c; }
+.card-back.fire, .fire { background-color: #F08030; border-color: #c06020; }
+.card-back.water, .water { background-color: #6890F0; border-color: #4a70c0; }
+.card-back.electric, .electric { background-color: #F8D030; border-color: #c8a020; color: #333; }
+.card-back.electric .stat-bar-fill { background: #333; }
+.card-back.electric { color: #333; }
+.card-back.electric .back-header, .card-back.electric .extra-info { border-color: rgba(0,0,0,0.1); }
+.card-back.poison, .poison { background-color: #A040A0; border-color: #7a307a; }
+.card-back.flying, .flying { background-color: #A890F0; border-color: #8a70d0; }
+.card-back.bug, .bug { background-color: #A8B820; border-color: #8a981a; }
+.card-back.normal, .normal { background-color: #A8A878; border-color: #8a8a60; }
+.card-back.ground, .ground { background-color: #E0C068; border-color: #b09850; }
+.card-back.fairy, .fairy { background-color: #EE99AC; border-color: #c8788a; }
+.card-back.fighting, .fighting { background-color: #C03028; border-color: #982620; }
+.card-back.psychic, .psychic { background-color: #F85888; border-color: #c6466c; }
+.card-back.rock, .rock { background-color: #B8A038; border-color: #907e2c; }
+.card-back.ghost, .ghost { background-color: #705898; border-color: #584678; }
+.card-back.ice, .ice { background-color: #98D8D8; border-color: #78a8a8; color: #333;}
+.card-back.dragon, .dragon { background-color: #7038F8; border-color: #582cc6; }
