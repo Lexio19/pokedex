@@ -6,7 +6,6 @@
 
 Una Pokédex interactiva construida con **Angular**, que transforma la lista clásica de Pokémon en una colección de cartas coleccionables con animaciones 3D.
 
-[Ver Demo en Vivo (Opcional si lo subes a Vercel/Netlify)]
 
 ---
 
