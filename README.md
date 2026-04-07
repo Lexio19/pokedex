@@ -21,7 +21,7 @@ Una Pokédex interactiva construida con **Angular**, que transforma la lista cl�
 
 ## 📸 Vista Previa
 
-| Vista Frontal | Vista Trasera (Stats) |
+| Vista Frontal | Vista Trasera (Estadísticas) |
 | :--- | :--- |
 | ![Frontal](./assets/captura1.jpg) | ![Trasera](./assets/captura2.jpg) |
 
@@ -57,7 +57,8 @@ Bash
 ng serve
 Abre tu navegador en http://localhost:4200/.
 
-💡 Aprendizajes del Proyecto
+💡 **Aprendizajes del Proyecto**
+
 Este proyecto me permitió profundizar en:
 
 Consumo de APIs REST asíncronas con HttpClient y Observables.
@@ -66,4 +67,4 @@ Manejo de animaciones CSS 3D complejas.
 
 Estructuración de servicios y componentes Standalone en Angular moderno.
 
-Hecho con ❤️ por [TU NOMBRE]
+Hecho con ❤️ por Alejandro Miras Andújar
