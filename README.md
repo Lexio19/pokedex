@@ -23,7 +23,7 @@ Una Pokédex interactiva construida con **Angular**, que transforma la lista cl�
 
 | Vista Frontal | Vista Trasera (Stats) |
 | :--- | :--- |
-| ![Frontal](https://via.placeholder.com/200x300?text=Card+Front) | ![Trasera](https://via.placeholder.com/200x300?text=Stats+View) |
+| ![Frontal]('./assets/captura1.jpg') | ![Trasera]('./assets/captura2.jpg') |
 > *Tip: Sustituye estas imágenes por capturas de pantalla reales de tu aplicación una vez esté corriendo.*
 
 ---
