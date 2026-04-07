@@ -1,4 +1,4 @@
-# ⚡ PokéCard Dex 151 - Angular Edition
+# ⚡ Pokédex 151 - Angular Edition
 
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
