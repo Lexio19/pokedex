@@ -46,13 +46,13 @@ Si quieres probar este proyecto localmente, sigue estos pasos:
    
 2. **Instalar dependencias:**
 
-Bash
+    ```bash
 cd angular-pokedex
 npm install
 
 3. **Ejecutar el servidor de desarrollo:**
 
-Bash
+    ```bash
 ng serve
 Abre tu navegador en http://localhost:4200/.
 
