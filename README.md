@@ -1,59 +1,69 @@
-# Pokedex
+# ⚡ PokéCard Dex 151 - Angular Edition
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-## Development server
+Una Pokédex interactiva construida con **Angular**, que transforma la lista clásica de Pokémon en una colección de cartas coleccionables con animaciones 3D.
 
-To start a local development server, run:
+[Ver Demo en Vivo (Opcional si lo subes a Vercel/Netlify)]
 
-```bash
+---
+
+## ✨ Características Especiales
+
+- 🃏 **Efecto de Giro 3D**: Al pasar el ratón por encima, la carta gira para mostrar estadísticas.
+- 📊 **Dynamic Stats**: Visualización de estadísticas base (HP, Ataque, Defensa...) mediante barras de progreso dinámicas.
+- 🎨 **Adaptive UI**: El color de la carta y las etiquetas cambian automáticamente según el tipo principal del Pokémon (Fuego, Agua, Planta, etc.).
+- 🚀 **High Performance**: Consumo optimizado de la [PokéAPI](https://pokeapi.co/) utilizando componentes Standalone y servicios inyectables.
+
+---
+
+## 📸 Vista Previa
+
+| Vista Frontal | Vista Trasera (Stats) |
+| :--- | :--- |
+| ![Frontal](https://via.placeholder.com/200x300?text=Card+Front) | ![Trasera](https://via.placeholder.com/200x300?text=Stats+View) |
+> *Tip: Sustituye estas imágenes por capturas de pantalla reales de tu aplicación una vez esté corriendo.*
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Framework:** Angular (v18/19)
+- **Lenguaje:** TypeScript
+- **Estilos:** CSS3 nativo (CSS Grid, Flexbox, Perspective 3D)
+- **API:** PokeAPI v2
+
+---
+
+## 📦 Instalación y Uso
+
+Si quieres probar este proyecto localmente, sigue estos pasos:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/TU_USUARIO/angular-pokedex.git](https://github.com/TU_USUARIO/angular-pokedex.git)
+   
+2. **Instalar dependencias:**
+
+Bash
+cd angular-pokedex
+npm install
+
+3. **Ejecutar el servidor de desarrollo:**
+
+Bash
 ng serve
-```
+Abre tu navegador en http://localhost:4200/.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+💡 Aprendizajes del Proyecto
+Este proyecto me permitió profundizar en:
 
-## Code scaffolding
+Consumo de APIs REST asíncronas con HttpClient y Observables.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Manejo de animaciones CSS 3D complejas.
 
-```bash
-ng generate component component-name
-```
+Estructuración de servicios y componentes Standalone en Angular moderno.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Hecho con ❤️ por [TU NOMBRE]
