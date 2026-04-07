@@ -23,8 +23,8 @@ Una Pokédex interactiva construida con **Angular**, que transforma la lista cl�
 
 | Vista Frontal | Vista Trasera (Stats) |
 | :--- | :--- |
-| ![Frontal]('./assets/captura1.jpg') | ![Trasera]('./assets/captura2.jpg') |
-> *Tip: Sustituye estas imágenes por capturas de pantalla reales de tu aplicación una vez esté corriendo.*
+| ![Frontal](./assets/captura1.jpg) | ![Trasera](./assets/captura2.jpg) |
+
 
 ---
 
